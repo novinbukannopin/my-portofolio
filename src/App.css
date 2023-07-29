@@ -6,7 +6,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #1d1e22;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a {
@@ -43,6 +43,7 @@ nav {
 
 .content {
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 

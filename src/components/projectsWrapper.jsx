@@ -1,8 +1,8 @@
-import cashRegister from "../images/cash-register.png";
-import noteApp from "../images/note-app.png";
-import spotimad from "../images/spotimad.png";
-import todolist from "../images/todolist.png";
-import webAutomation from "../images/web-automation.png";
+import cashRegister from "../assets/CashRegister.png";
+import noteApp from "../assets/NoteApp.png";
+import spotimad from "../assets/Spotimad.png";
+import todolist from "../assets/Todolist.png";
+import webAutomation from "../assets/WebAutomation.png";
 import ImageSlider from "./imageSlider";
 
 export default function ProjectsWrapper() {

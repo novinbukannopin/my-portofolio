@@ -36,7 +36,7 @@ export default function ProjectsWrapper() {
   };
 
   return (
-    <div className="projects" style={containerStyle}>
+    <div className="projects" id="projects" style={containerStyle}>
       <ImageSlider slides={slides} />
     </div>
   );

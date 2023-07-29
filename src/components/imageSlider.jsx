@@ -90,7 +90,7 @@ export default function ImageSlider({ slides }) {
         )}
       </div>
       {slides.map((slide, index) => {
-        if (slide && index == currentIndex)
+        if (slide && index === currentIndex)
           if (slideDirection === "right")
             return (
               <Fade key={slide.title} right duration={timeSlideTransition}>

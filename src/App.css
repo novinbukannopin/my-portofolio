@@ -68,6 +68,7 @@ nav {
   padding: 35px;
   display: flex;
   width: 60%;
+  gap: 10px;
   align-items: center;
   margin-left: 100px;
 }
@@ -84,15 +85,13 @@ nav {
   flex-direction: column;
   font-size: 25px;
   text-align: left;
+  gap: 10px;
 }
+
 .description h3 {
   display: flex;
   gap: 10px;
 }
-.description p {
-  margin-top: -20px;
-}
-
 /* CONTACT */
 .contact {
   display: flex;

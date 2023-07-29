@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { Fade } from "react-reveal";
 
 const slideStyles = {
   width: "100%",
@@ -58,12 +59,20 @@ const dotStyle = {
 
 export default function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(null);
   const isFirstIndex = currentIndex === 0;
   const isLastIndex = currentIndex === slides.length - 1;
+  const timeSlideTransition = 500;
 
   const goToSlide = (slideIndex) => setCurrentIndex(slideIndex);
-  const goToPrevious = () => goToSlide(currentIndex - 1);
-  const goToNext = () => goToSlide(currentIndex + 1);
+  const goToPrevious = () => {
+    setSlideDirection("left");
+    goToSlide(currentIndex - 1);
+  };
+  const goToNext = () => {
+    setSlideDirection("right");
+    goToSlide(currentIndex + 1);
+  };
   const slideStylesWidthBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].source})`,
@@ -85,11 +94,30 @@ export default function ImageSlider({ slides }) {
       </div>
       {slides.map((slide, index) => {
         if (slide && index == currentIndex)
-          return (
-            <div key={slide.title}>
-              <div style={slideStylesWidthBackground} />
-            </div>
-          );
+          if (slideDirection === "right")
+            return (
+              <Fade right duration={timeSlideTransition}>
+                <div key={slide.title}>
+                  <div style={slideStylesWidthBackground} />
+                </div>
+              </Fade>
+            );
+          else if (slideDirection === "left")
+            return (
+              <Fade left duration={timeSlideTransition}>
+                <div key={slide.title}>
+                  <div style={slideStylesWidthBackground} />
+                </div>
+              </Fade>
+            );
+          else
+            return (
+              <Fade bottom duration={timeSlideTransition}>
+                <div key={slide.title}>
+                  <div style={slideStylesWidthBackground} />
+                </div>
+              </Fade>
+            );
       })}
       <div style={dotsContainerStyles}>
         {slides.map((slide, index) => {

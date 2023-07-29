@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  color: #aeadac;
+  font-family: "Poppins", sans-serif;
+  background-color: #1d1e22;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #aeadac;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  color: cornflowerblue;
+}
+
+a:last-child {
+  margin-right: 35px;
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: #aeadac;
+  text-align: left;
+}
+
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  gap: 30px;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+}
+
+.about,
+.projects,
+.contact {
+  max-width: 100%;
+  height: 100vh;
+}
+
+.about {
+  display: flex;
+}
+
+.card {
+  background-color: #1d1e22;
+  border-bottom: 1px solid #282931;
+  margin-bottom: 50px;
+  padding: 35px;
+  display: flex;
+  width: 60%;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.description {
+  font-size: 25px;
+  text-align: left;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 35px;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* CONTACT */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 100px;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form {
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#name,
+#messages {
+  background: transparent;
+  border: none;
+  color: #aeadac;
+  font-family: "Poppins";
+  font-size: 15px;
+  border-bottom: 1px solid #282931;
+}
+
+#name {
+  height: 50px;
+  width: 100%;
+}
+
+#messages {
+  width: 100%;
+  min-height: 100px;
+  font-size: 15px;
+  resize: none;
+}
+
+#name:focus,
+#submit:focus,
+#messages:focus {
+  outline: none;
+  border-bottom: 3px solid #555;
+}
+
+#submit {
+  padding: 10px 20px 10px 20px;
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .social {
+  display: flex;
+  gap: 50px;
+}
+
+.footer p {
+  margin-left: 25px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  a:last-child {
+    margin-right: 0;
   }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about {
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    margin-left: 0;
+  }
+}
+
+/* SCROLLBAR AND INPUT WEBKIT */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #aeadac;
+  -webkit-box-shadow: 0 0 0px 1000px #1d1e22 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #282931;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

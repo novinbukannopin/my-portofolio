@@ -93,26 +93,20 @@ export default function ImageSlider({ slides }) {
         if (slide && index == currentIndex)
           if (slideDirection === "right")
             return (
-              <Fade right duration={timeSlideTransition}>
-                <div key={slide.title}>
-                  <div style={slideStylesWidthBackground} />
-                </div>
+              <Fade key={slide.title} right duration={timeSlideTransition}>
+                <div style={slideStylesWidthBackground} />
               </Fade>
             );
           else if (slideDirection === "left")
             return (
-              <Fade left duration={timeSlideTransition}>
-                <div key={slide.title}>
-                  <div style={slideStylesWidthBackground} />
-                </div>
+              <Fade key={slide.title} left duration={timeSlideTransition}>
+                <div style={slideStylesWidthBackground} />
               </Fade>
             );
           else
             return (
-              <Fade bottom duration={timeSlideTransition}>
-                <div key={slide.title}>
-                  <div style={slideStylesWidthBackground} />
-                </div>
+              <Fade key={slide.title} bottom duration={timeSlideTransition}>
+                <div style={slideStylesWidthBackground} />
               </Fade>
             );
       })}

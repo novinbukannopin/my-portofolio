@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { Fade } from "react-reveal";
+import Pulse from "react-reveal/Pulse";
 
 const slideStyles = {
   width: "100%",
   height: "100vh",
   borderRadius: "10px",
-  backgroundSize: "cover",
+  backgroundSize: "100% 100%",
 };
 
 const rightArrowStyles = {
@@ -94,19 +95,25 @@ export default function ImageSlider({ slides }) {
           if (slideDirection === "right")
             return (
               <Fade key={slide.title} right duration={timeSlideTransition}>
-                <div style={slideStylesWidthBackground} />
+                <Pulse>
+                  <div style={slideStylesWidthBackground} />
+                </Pulse>
               </Fade>
             );
           else if (slideDirection === "left")
             return (
               <Fade key={slide.title} left duration={timeSlideTransition}>
-                <div style={slideStylesWidthBackground} />
+                <Pulse>
+                  <div style={slideStylesWidthBackground} />
+                </Pulse>
               </Fade>
             );
           else
             return (
               <Fade key={slide.title} bottom duration={timeSlideTransition}>
-                <div style={slideStylesWidthBackground} />
+                <Pulse>
+                  <div style={slideStylesWidthBackground} />
+                </Pulse>
               </Fade>
             );
       })}

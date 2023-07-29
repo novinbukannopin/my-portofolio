@@ -29,14 +29,8 @@ export default function ProjectsWrapper() {
     },
   ];
 
-  const containerStyle = {
-    width: "100%",
-    height: "100vh",
-    margin: "0 auto",
-  };
-
   return (
-    <div className="projects" id="projects" style={containerStyle}>
+    <div className="projects" id="projects">
       <ImageSlider slides={slides} />
     </div>
   );

@@ -1,4 +1,5 @@
 import { Fade } from "react-reveal";
+import Tada from "react-reveal/Tada";
 export default function About() {
   return (
     <div className="about" id="about">
@@ -12,7 +13,9 @@ export default function About() {
         </Fade>
         <Fade bottom>
           <div className="description">
-            <h3>Hi there 👋</h3>
+            <h3>
+              Hi there <Tada delay={1100}>👋</Tada>
+            </h3>
             <p>
               I'm Achmad, I'm beginner developer. Now I study at University
               Islam Negeri Sunan Ampel, Surabaya.

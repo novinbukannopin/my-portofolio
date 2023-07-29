@@ -5,7 +5,7 @@ import todolist from "../images/todolist.png";
 import webAutomation from "../images/web-automation.png";
 import ImageSlider from "./imageSlider";
 
-export default function Wrapper() {
+export default function ProjectsWrapper() {
   const slides = [
     {
       title: "Cash Register",
@@ -36,7 +36,7 @@ export default function Wrapper() {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className="projects" style={containerStyle}>
       <ImageSlider slides={slides} />
     </div>
   );

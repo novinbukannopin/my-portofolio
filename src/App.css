@@ -82,17 +82,6 @@ nav {
   text-align: left;
 }
 
-/* PROJECTS */
-
-.projects {
-  display: flex;
-  min-height: 100vh;
-  padding: 0 35px;
-  margin-bottom: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
 /* CONTACT */
 .contact {
   display: flex;

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import Fade from "react-reveal/Fade";
 
 const slideStyles = {
   width: "100%",
@@ -87,9 +86,9 @@ export default function ImageSlider({ slides }) {
       {slides.map((slide, index) => {
         if (slide && index == currentIndex)
           return (
-            <Fade key={slide.title} right duration={500} opposite collapse>
+            <div key={slide.title}>
               <div style={slideStylesWidthBackground} />
-            </Fade>
+            </div>
           );
       })}
       <div style={dotsContainerStyles}>

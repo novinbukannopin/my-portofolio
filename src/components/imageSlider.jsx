@@ -94,7 +94,7 @@ export default function ImageSlider({ slides }) {
         if (slide && index === currentIndex)
           if (slideDirection === "right")
             return (
-              <Fade key={slide.title} right duration={timeSlideTransition}>
+              <Fade key={slide.id} right duration={timeSlideTransition}>
                 <Pulse>
                   <div style={slideStylesWidthBackground} />
                 </Pulse>
@@ -102,7 +102,7 @@ export default function ImageSlider({ slides }) {
             );
           else if (slideDirection === "left")
             return (
-              <Fade key={slide.title} left duration={timeSlideTransition}>
+              <Fade key={slide.id} left duration={timeSlideTransition}>
                 <Pulse>
                   <div style={slideStylesWidthBackground} />
                 </Pulse>
@@ -110,7 +110,7 @@ export default function ImageSlider({ slides }) {
             );
           else
             return (
-              <Fade key={slide.title} bottom duration={timeSlideTransition}>
+              <Fade key={slide.id} bottom duration={timeSlideTransition}>
                 <Pulse>
                   <div style={slideStylesWidthBackground} />
                 </Pulse>
@@ -127,14 +127,14 @@ export default function ImageSlider({ slides }) {
                   backgroundColor: "#aeadac",
                   transition: "500ms all",
                 }}
-                key={slide.title}
+                key={slide.id}
               ></div>
             );
           else
             return (
               <div
                 style={dotStyle}
-                key={slide.title}
+                key={slide.id}
                 onClick={() => goToSlide(index)}
               ></div>
             );

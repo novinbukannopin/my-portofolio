@@ -34,7 +34,7 @@ export default function EmailForm() {
   }
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <h2>Send your advice</h2>
       {alert && (
         <Alert
@@ -50,7 +50,7 @@ export default function EmailForm() {
           {capitalize(alert)} to sent an email
         </Alert>
       )}
-      <form ref={ref} method="post" onSubmit={sendEmail} id="contact">
+      <form ref={ref} method="post" onSubmit={sendEmail}>
         <input
           type="text"
           name="name"

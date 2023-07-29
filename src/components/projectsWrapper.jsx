@@ -8,23 +8,23 @@ import ImageSlider from "./imageSlider";
 export default function ProjectsWrapper() {
   const slides = [
     {
-      title: "Cash Register",
+      id: 1,
       source: cashRegister,
     },
     {
-      title: "Note App",
+      id: 2,
       source: noteApp,
     },
     {
-      title: "Spotimad",
+      id: 3,
       source: spotimad,
     },
     {
-      title: "Todolist",
+      id: 4,
       source: todolist,
     },
     {
-      title: "Web Automation",
+      id: 5,
       source: webAutomation,
     },
   ];

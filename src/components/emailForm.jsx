@@ -36,6 +36,20 @@ export default function EmailForm() {
   return (
     <div className="contact">
       <h2>Send your advice</h2>
+      {alert && (
+        <Alert
+          sx={{
+            backgroundColor: "transparent",
+            color: alert === "success" ? "#C8E4C9" : "#BF9D9E",
+            width: "50%",
+          }}
+          variant="outlined"
+          severity={alert}
+        >
+          <AlertTitle>{capitalize(alert)}</AlertTitle>
+          {capitalize(alert)} to sent an email
+        </Alert>
+      )}
       <form ref={ref} method="post" onSubmit={sendEmail} id="contact">
         <input
           type="text"
@@ -52,20 +66,6 @@ export default function EmailForm() {
         ></textarea>
         <input id="submit" type="submit" value="Send message" />
       </form>
-      {alert && (
-        <Alert
-          sx={{
-            backgroundColor: "transparent",
-            color: alert === "success" ? "#C8E4C9" : "#BF9D9E",
-            width: "50%",
-          }}
-          variant="outlined"
-          severity={alert}
-        >
-          <AlertTitle>{capitalize(alert)}</AlertTitle>
-          {capitalize(alert)} to sent an email
-        </Alert>
-      )}
     </div>
   );
 }

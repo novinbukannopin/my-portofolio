@@ -64,15 +64,12 @@ export default function ImageSlider({ slides }) {
   const isLastIndex = currentIndex === slides.length - 1;
   const timeSlideTransition = 500;
 
-  const goToSlide = (slideIndex) => setCurrentIndex(slideIndex);
-  const goToPrevious = () => {
-    setSlideDirection("left");
-    goToSlide(currentIndex - 1);
+  const goToSlide = (slideIndex) => {
+    setSlideDirection(slideIndex < currentIndex ? "left" : "right");
+    setCurrentIndex(slideIndex);
   };
-  const goToNext = () => {
-    setSlideDirection("right");
-    goToSlide(currentIndex + 1);
-  };
+  const goToPrevious = () => goToSlide(currentIndex - 1);
+  const goToNext = () => goToSlide(currentIndex + 1);
   const slideStylesWidthBackground = {
     ...slideStyles,
     backgroundImage: `url(${slides[currentIndex].source})`,

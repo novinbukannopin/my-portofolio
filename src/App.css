@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   color: #aeadac;
   font-family: "Poppins", sans-serif;
   background-color: #1d1e22;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -173,10 +170,6 @@ form {
 /* RESPONSIVE */
 
 @media only screen and (max-width: 600px) {
-  *,
-  body {
-    overflow-x: hidden;
-  }
   nav {
     justify-content: center;
   }

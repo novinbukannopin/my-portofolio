@@ -15,7 +15,7 @@ export default function About() {
             <h3>Hi there</h3>
             <p>
               I'm Achmad, I'm beginner developer. Now I study at University
-              Islam Negeri Sunan Ampel.
+              Islam Negeri Sunan Ampel, Surabaya.
             </p>
           </div>
         </Fade>

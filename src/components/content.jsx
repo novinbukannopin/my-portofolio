@@ -1,6 +1,6 @@
 import EmailForm from "./emailForm";
 import ProjectsWrapper from "./projectsWrapper";
-import AlertContextProvider from "../contexts/AlerContext";
+import AlertContextProvider from "../contexts/AlertContext";
 import About from "./about";
 
 export default function Content() {

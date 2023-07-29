@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import { useRef, useContext } from "react";
-import { AlertContext } from "../contexts/AlerContext";
+import { AlertContext } from "../contexts/AlertContext";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 

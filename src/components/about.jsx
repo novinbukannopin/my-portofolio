@@ -12,7 +12,7 @@ export default function About() {
         </Fade>
         <Fade bottom>
           <div className="description">
-            <h3>Hi there</h3>
+            <h3>Hi there 👋</h3>
             <p>
               I'm Achmad, I'm beginner developer. Now I study at University
               Islam Negeri Sunan Ampel, Surabaya.

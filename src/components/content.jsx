@@ -1,16 +1,3 @@
-import EmailForm from "./emailForm";
-import ProjectsWrapper from "./projectsWrapper";
-import AlertContextProvider from "../contexts/AlertContext";
-import About from "./about";
-
-export default function Content() {
-  return (
-    <div className="content">
-      <About />
-      <ProjectsWrapper />
-      <AlertContextProvider>
-        <EmailForm />
-      </AlertContextProvider>
-    </div>
-  );
+export default function Content({ children }) {
+  return <div className="content">{children}</div>;
 }

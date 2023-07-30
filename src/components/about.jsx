@@ -1,5 +1,6 @@
 import { Fade } from "react-reveal";
 import Tada from "react-reveal/Tada";
+
 export default function About() {
   return (
     <div className="about" id="about">

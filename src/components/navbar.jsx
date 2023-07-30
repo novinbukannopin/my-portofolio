@@ -1,9 +1,26 @@
+import { Fade } from "react-reveal";
+import { Link } from "react-scroll";
+
 export default function Navbar() {
+  const delay = 500;
+  const duration = 500;
   return (
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <Fade left delay={delay}>
+        <Link to="about" smooth={true} duration={duration}>
+          About
+        </Link>
+      </Fade>
+      <Fade left delay={delay + 100}>
+        <Link to="projects" smooth={true} offset={-100} duration={duration}>
+          Projects
+        </Link>
+      </Fade>
+      <Fade left delay={delay + 200}>
+        <Link to="contact" smooth={true} duration={duration}>
+          Contact
+        </Link>
+      </Fade>
     </nav>
   );
 }

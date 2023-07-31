@@ -6,21 +6,26 @@ export default function Navbar() {
   const duration = 500;
   return (
     <nav>
-      <Fade left delay={delay}>
-        <Link to="about" smooth={true} duration={duration}>
-          About
-        </Link>
+      <Fade left delay={delay - 100}>
+        <img src="/logo.png" alt="Logo" />
       </Fade>
-      <Fade left delay={delay + 100}>
-        <Link to="projects" smooth={true} offset={-100} duration={duration}>
-          Projects
-        </Link>
-      </Fade>
-      <Fade left delay={delay + 200}>
-        <Link to="contact" smooth={true} duration={duration}>
-          Contact
-        </Link>
-      </Fade>
+      <div>
+        <Fade left delay={delay}>
+          <Link to="about" smooth={true} duration={duration}>
+            About
+          </Link>
+        </Fade>
+        <Fade left delay={delay + 100}>
+          <Link to="projects" smooth={true} offset={-100} duration={duration}>
+            Projects
+          </Link>
+        </Fade>
+        <Fade left delay={delay + 200}>
+          <Link to="contact" smooth={true} duration={duration}>
+            Contact
+          </Link>
+        </Fade>
+      </div>
     </nav>
   );
 }

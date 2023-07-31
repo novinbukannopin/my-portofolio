@@ -7,6 +7,7 @@ import Contact from "./components/contact";
 import ProjectsWrapper from "./components/projectsWrapper";
 import AlertContextProvider from "./contexts/AlertContext";
 import About from "./components/about";
+
 export default function App() {
   return (
     <div>

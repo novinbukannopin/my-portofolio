@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <div id="contact" className="contact">
-      <h2>Send your advice</h2>
+      <h1>Send your advice</h1>
       {alert && (
         <Alert
           sx={{

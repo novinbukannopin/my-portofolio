@@ -30,13 +30,10 @@ body {
 
 a {
   text-decoration: none;
-  cursor: pointer;
+  cursor: default;
+  font-weight: bold;
   font-size: 20px;
-  transition: all 500ms;
-}
-
-a:hover {
-  color: var(--linkHover);
+  transition: all 300ms;
 }
 
 a:last-child {
@@ -86,6 +83,7 @@ nav div {
 }
 
 nav .active {
+  font-weight: bold;
   color: var(--linkHover);
 }
 

@@ -1,10 +1,10 @@
 import emailjs from "emailjs-com";
-import { useRef, useContext } from "react";
+import React, { useRef, useContext } from "react";
 import { AlertContext } from "../contexts/AlertContext";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 
-export default function Contact() {
+const Contact = React.forwardRef((props, contactRef) => {
   const ref = useRef(null);
   const [alert, setAlert] = useContext(AlertContext);
 
@@ -34,7 +34,7 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className="contact">
+    <div ref={contactRef} id="contact" className="contact">
       <h1>Send your advice</h1>
       {alert && (
         <Alert
@@ -68,4 +68,5 @@ export default function Contact() {
       </form>
     </div>
   );
-}
+});
+export default Contact;

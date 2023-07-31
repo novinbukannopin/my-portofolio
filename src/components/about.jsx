@@ -1,9 +1,10 @@
+import React from "react";
 import { Fade } from "react-reveal";
 import Shake from "react-reveal/Shake";
 
-export default function About() {
+const About = React.forwardRef((props, ref) => {
   return (
-    <div className="about" id="about">
+    <div className="about" ref={ref} id="about">
       <div className="card">
         <Fade left>
           <img
@@ -25,4 +26,6 @@ export default function About() {
       </div>
     </div>
   );
-}
+});
+
+export default About;

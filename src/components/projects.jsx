@@ -1,4 +1,5 @@
 import { Fade } from "react-reveal";
+import React from "react";
 import cashRegister from "../assets/CashRegister.png";
 import noteApp from "../assets/NoteApp.png";
 import spotimad from "../assets/Spotimad.png";
@@ -43,9 +44,9 @@ const imgStyle = {
   height: "250px",
 };
 
-export default function ProjectsWrapper() {
+const Projects = React.forwardRef((props, ref) => {
   return (
-    <div className="projects" id="projects">
+    <div className="projects" ref={ref} id="projects">
       {slides.map((value, index) => {
         return (
           <Fade key={value.title} left delay={index * 100}>
@@ -62,4 +63,6 @@ export default function ProjectsWrapper() {
       })}
     </div>
   );
-}
+});
+
+export default Projects;

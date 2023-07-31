@@ -30,13 +30,9 @@ body {
 
 a {
   text-decoration: none;
-  font-weight: bold;
   cursor: pointer;
   font-size: 20px;
   transition: all 500ms;
-}
-a:active {
-  color: var(--linkHover);
 }
 
 a:hover {
@@ -87,6 +83,10 @@ nav img {
 nav div {
   display: flex;
   align-items: center;
+}
+
+nav .active {
+  color: var(--linkHover);
 }
 
 .content {

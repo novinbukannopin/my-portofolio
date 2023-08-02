@@ -103,7 +103,22 @@ nav .active {
 }
 
 .about {
+  position: relative;
   display: flex;
+}
+
+.about::after {
+  content: "";
+  background-image: url("https://avatars.githubusercontent.com/u/73148419?s=400&u=172e9812e0a3e57e3cd6aef1565178b5e12e28d5&v=4");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .card {
@@ -256,8 +271,8 @@ form {
   }
 
   .card img {
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 190px;
   }
 
   .description {
@@ -286,6 +301,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--colorTextOnTyping);
   -webkit-box-shadow: 0 0 0px 1000px var(--colorBg) inset;
+  -webkit-text-stroke-color: var(--colorTextOnTyping);
   transition: background-color 5000s ease-in-out 0s;
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 import Shake from "react-reveal/Shake";
+import { TypeAnimation } from "react-type-animation";
 
 const About = React.forwardRef((props, ref) => {
   return (
@@ -15,7 +16,21 @@ const About = React.forwardRef((props, ref) => {
         <Fade bottom>
           <div className="description">
             <h2>
-              Hi there <Shake delay={1100}>👋</Shake>
+              <TypeAnimation
+                sequence={[
+                  "Hi there",
+                  1000,
+                  "I'm Achmad",
+                  1000,
+                  "Nice too meet you",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={250}
+                style={{ display: "inline-block" }}
+                repeat={Infinity}
+              ></TypeAnimation>
+              <Shake delay={1100}>👋</Shake>
             </h2>
             <p>
               I'm Achmad, I'm beginner developer. Now I study at University

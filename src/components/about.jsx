@@ -33,7 +33,7 @@ const About = React.forwardRef((props, ref) => {
               <Shake delay={1100}>👋</Shake>
             </h2>
             <p>
-              I'm Achmad, I'm beginner developer. Now I study at University
+              I'm Achmad, I'm beginner developer. Now I study at Universitas
               Islam Negeri Sunan Ampel, Surabaya.
             </p>
           </div>

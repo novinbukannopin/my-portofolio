@@ -105,6 +105,7 @@ nav .active {
 .about {
   position: relative;
   display: flex;
+  margin-bottom: 150px;
 }
 
 .about::after {

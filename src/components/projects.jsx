@@ -1,10 +1,10 @@
-import { Fade } from "react-reveal";
 import React from "react";
 import cashRegister from "../assets/CashRegister.png";
 import noteApp from "../assets/NoteApp.png";
 import spotimad from "../assets/Spotimad.png";
 import todolist from "../assets/Todolist.png";
 import webAutomation from "../assets/WebAutomation.png";
+import { motion } from "framer-motion";
 
 const slides = [
   {
@@ -44,24 +44,38 @@ const imgStyle = {
   height: "250px",
 };
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, x: -100 },
+  show: { opacity: 1, x: 0 },
+};
+
 const Projects = React.forwardRef((props, ref) => {
   return (
-    <div className="projects" ref={ref} id="projects">
+    <motion.ul variants={container} initial="hidden" whileInView="show" className="projects" ref={ref} id="projects">
       {slides.map((value, index) => {
         return (
-          <Fade key={value.title} left delay={index * 100}>
-            <div
-              style={{
-                ...cardStyle,
-              }}
-            >
-              <img src={value.src} style={{ ...imgStyle }} alt={value.title} />
-              <p>{value.title}</p>
-            </div>
-          </Fade>
+          <motion.li
+            style={{
+              ...cardStyle,
+            }}
+            variants={item}
+            key={value.title}>
+            <img src={value.src} style={{ ...imgStyle }} alt={value.title} />
+            <p>{value.title}</p>
+          </motion.li>
         );
       })}
-    </div>
+    </motion.ul>
   );
 });
 

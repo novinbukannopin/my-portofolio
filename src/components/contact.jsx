@@ -1,12 +1,15 @@
 import emailjs from "emailjs-com";
-import React, { useRef, useContext } from "react";
-import { AlertContext } from "../contexts/AlertContext";
+import React, { useEffect, useRef, useState } from "react";
 import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 
 const Contact = React.forwardRef((props, contactRef) => {
   const ref = useRef(null);
-  const [alert, setAlert] = useContext(AlertContext);
+  const [alert, setAlert] = useState();
+
+  useEffect(() => {
+    setTimeout(() => setAlert(undefined), 3000);
+  }, [alert]);
 
   function sendEmail(e) {
     e.preventDefault();

@@ -6,7 +6,6 @@ import Navbar from "./components/navbar";
 
 import Contact from "./components/contact";
 import Projects from "./components/projects";
-import AlertContextProvider from "./contexts/AlertContext";
 import About from "./components/about";
 
 export default function App() {
@@ -20,9 +19,7 @@ export default function App() {
       <Content>
         <About ref={aboutRef} />
         <Projects ref={projectsRef} />
-        <AlertContextProvider>
-          <Contact ref={contactRef} />
-        </AlertContextProvider>
+        <Contact ref={contactRef} />
       </Content>
       <Footer />
     </div>

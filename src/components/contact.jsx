@@ -37,7 +37,7 @@ const Contact = React.forwardRef((props, contactRef) => {
   }
 
   return (
-    <div ref={contactRef} id="contact" className="contact">
+    <div ref={contactRef} id="contact" className="flex justify-center items-center flex-col gap-5">
       <h1 className="text-4xl font-extrabold">Suggestions Form</h1>
       {alert && (
         <Alert

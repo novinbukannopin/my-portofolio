@@ -3,11 +3,11 @@ import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
 export default function Footer() {
   const sizeIcons = "25px";
   return (
-    <div className="footer">
-      <p>
+    <div className="flex max-sm:flex-col justify-between items-center h-[10vh]">
+      <p className="sm:ml-5">
         Made by <strong>Achmad</strong>
       </p>
-      <div className="social">
+      <div className="flex max-sm:gap-5 gap-10">
         <a href="https://github.com/Achmad96">
           {<FaGithub size={sizeIcons} />}
         </a>

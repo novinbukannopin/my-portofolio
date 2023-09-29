@@ -37,7 +37,7 @@ export default function Navbar({ scrollToELement }) {
   return (
     <nav className="fixed flex items-center justify-between w-full h-20 z-50">
       <img src="/logo.png" className="w-10 h-10 max-sm:ml-5 ml-24" alt="Logo" />
-      <div className="flex max-sm:text-xs text-xl max-sm:gap-5 gap-10 font-extrabold">
+      <div className="flex max-sm:text-base text-xl max-sm:gap-5 gap-10 font-extrabold">
         <Link ref={aboutBtn} to="about" smooth={true} duration={duration} className={activeIndex === 0 ? "active" : ""}>
         <span>01. </span> About
         </Link>

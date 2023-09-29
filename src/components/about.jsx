@@ -3,7 +3,7 @@ import { Link } from "react-scroll"
 const About = React.forwardRef((props, ref) => {
   return (
     <div className="about flex items-center" ref={ref} id="about">
-      <div className="flex max-sm:ml-10 max-md:ml-20 ml-60">
+      <div className="flex max-sm:ml-5 max-md:ml-20 ml-60">
         <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-2">
           <p className="text-teal-200 font-extrabold text-2xl">Hi, my name is</p>

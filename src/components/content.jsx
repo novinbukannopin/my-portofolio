@@ -1,3 +1,3 @@
 export default function Content({ children }) {
-  return <div className="content">{children}</div>;
+  return <div className="flex flex-col w-full h-auto">{children}</div>;
 }

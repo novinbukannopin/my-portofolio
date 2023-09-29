@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorText: #ffff;
+  --colorBg: #1d1e22;
+  --linkHover: cornflowerblue;
+  --colorTextOnTyping: #adadac;
+  --borderBottomColor: 1px solid #282931;
+  --borderColor: #555;
+  --fontFamily: "Catamaran", "Poppins", sans-serif;
+  --opacityH: 0.7;
+  --opacityP: 0.6;
+}
+
+body {
+  color: var(--colorText);
+  font-family: var(--fontFamily);
+  background-color: var(--colorBg);
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: default;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 300ms;
+}
+
+a:last-child {
+  margin-right: 35px;
+}
+
+a,
+p,
+h1,
+h2,
+h3 {
+  color: var(--colorText);
+}
+
+h1,
+h2,
+h3 {
+  opacity: var(--opacityH);
+}
+
+a,
+p {
+  opacity: var(--opacityP);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 10vh;
+  background-color: #282931;
+  border-bottom: 1px solid #282931;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.31);
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.31);
+}
+
+nav img {
+  margin-left: 5rem;
+  width: 60px;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav .active {
+  font-weight: bold;
+  color: var(--linkHover);
+}
+
+.content {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.about,
+.work,
+.contact {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  margin-bottom: 150px;
+}
+
+.about::after {
+  content: "";
+  background-image: url("assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 30%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.card {
+  border-bottom: var(--borderBottomColor);
+  margin-bottom: 50px;
+  padding: 35px;
+  display: flex;
+  width: 60%;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 100px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 25px;
+  box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  text-align: left;
+  gap: 10px;
+}
+
+.description h2 {
+  display: flex;
+  gap: 10px;
+}
+
+.work {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+.work p {
+  text-align: center;
+}
+
+/* CONTACT */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form {
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#name,
+#messages {
+  background: transparent;
+  border: none;
+  color: var(--colorTextOnTyping);
+  border-bottom: 1px solid var(--borderColor);
+  font-family: var(--fontFamily);
+  font-size: 15px;
+}
+
+#name {
+  height: 50px;
+  width: 100%;
+}
+
+#messages {
+  width: 100%;
+  min-height: 100px;
+  font-size: 15px;
+  resize: none;
+}
+
+#name:focus,
+#submit:focus,
+#messages:focus {
+  outline: none;
+  border-bottom: 2px solid var(--borderColor);
+}
+
+#submit {
+  padding: 10px 20px 10px 20px;
+  margin-top: 25px;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .social {
+  display: flex;
+  gap: 50px;
+}
+
+.footer p {
+  margin-left: 25px;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+  nav img {
+    margin-left: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  nav div {
+    gap: 1rem;
+  }
+
+  nav div a:last-child {
+    margin-right: 1rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about {
+    justify-content: center;
+  }
+
+  .card {
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-top: 70px;
+  }
+
+  .card img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    margin-left: 0;
+  }
+}
+
+/* SCROLLBAR AND INPUT WEBKIT */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--colorTextOnTyping);
+  -webkit-box-shadow: 0 0 0px 1000px var(--colorBg) inset;
+  -webkit-text-stroke-color: var(--colorTextOnTyping);
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #282931;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--borderColor);
+}

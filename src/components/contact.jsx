@@ -38,7 +38,7 @@ const Contact = React.forwardRef((props, contactRef) => {
 
   return (
     <div ref={contactRef} id="contact" className="contact">
-      <h1>Send your advice</h1>
+      <h1 className="text-4xl font-extrabold">Suggestions Form</h1>
       {alert && (
         <Alert
           sx={{
@@ -55,6 +55,7 @@ const Contact = React.forwardRef((props, contactRef) => {
       )}
       <form ref={ref} method="post" onSubmit={sendEmail}>
         <input
+          className="h-14 w-full"
           type="text"
           name="name"
           id="name"
@@ -62,12 +63,13 @@ const Contact = React.forwardRef((props, contactRef) => {
           required
         />
         <textarea
+          className="h-14 w-full"
           name="messages"
           id="messages"
-          placeholder="Messages to send"
+          placeholder="What is your advice?"
           required
         ></textarea>
-        <input id="submit" type="submit" value="Send message" />
+        <input className="border-2 rounded-full border-cyan-200 p-3 hover:border-cyan-900 hover:cursor-pointer hover:bg-cyan-900 active:border-stone-700" id="submit" type="submit" value="Send message" />
       </form>
     </div>
   );

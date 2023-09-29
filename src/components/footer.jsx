@@ -7,7 +7,7 @@ export default function Footer() {
       <p className="sm:ml-5">
         Made by <strong>Achmad</strong>
       </p>
-      <div className="flex max-sm:gap-5 gap-10">
+      <div className="flex h-full justify-center items-center max-sm:gap-5 gap-10">
         <a href="https://github.com/Achmad96">
           {<FaGithub size={sizeIcons} />}
         </a>
